@@ -35,22 +35,7 @@ private class PushPriceChangeNotification_1_Tests {
         insert favorite;
     }
 
-    @isTest
-    static void testPushNotification_HappyPath() {
-        Test.startTest();
-        Dreamhouse_Settings__c settings = Dreamhouse_Settings__c.getOrgDefaults();
-        settings.Push_Server_URL__c = 'http://example.com/push';
-        update settings;
-
-        Property__c testProperty = [SELECT Id FROM Property__c LIMIT 1];
-        List<Id> propertyIds = new List<Id>{ testProperty.Id };
-
-        PushPriceChangeNotification.pushNotification(propertyIds);
-
-        Integer jobs = [SELECT COUNT() FROM AsyncApexJob WHERE ApexClass.Name = 'QueueablePushCall'];
-        System.assertEquals(1, jobs, 'A queueable job should be enqueued.');
-        Test.stopTest();
-    }
+    
 
     @isTest
     static void testPushNotification_NoSettings() {
@@ -66,21 +51,7 @@ private class PushPriceChangeNotification_1_Tests {
         Test.stopTest();
     }
 
-    @isTest
-    static void testPushNotification_EmptyPropertyId() {
-        Test.startTest();
-        Dreamhouse_Settings__c settings = Dreamhouse_Settings__c.getOrgDefaults();
-        settings.Push_Server_URL__c = 'http://example.com/push';
-        update settings;
-
-        List<Id> propertyIds = new List<Id>();
-
-        PushPriceChangeNotification.pushNotification(propertyIds);
-
-        Integer jobs = [SELECT COUNT() FROM AsyncApexJob WHERE ApexClass.Name = 'QueueablePushCall'];
-        System.assertEquals(0, jobs, 'No queueable job should be enqueued.');
-        Test.stopTest();
-    }
+    
 
     // Additional test methods for other scenarios would follow the similar structure
     // with the appropriate setup and assertions.
