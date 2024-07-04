@@ -6,7 +6,7 @@
 
 Dreamhouse is a sample application for the real estate business built on the Salesforce platform. It allows brokers to manage their properties and customers to find their dream house.
 
-**Deployment Steps to Enterprise edition sandbox**
+### Deployment Steps to Enterprise edition sandbox
 
 1. Authorize your sandbox with an alias on your system local :
 ``` 
