@@ -6,6 +6,30 @@
 
 Dreamhouse is a sample application for the real estate business built on the Salesforce platform. It allows brokers to manage their properties and customers to find their dream house.
 
+**Deployment Steps to Enterprise edition sandbox**
+
+1. Authorize your sandbox with an alias on your system local :
+``` 
+sf org login web -r https://test.salesforce.com  -a DreamhouseSandbox
+```
+
+2.  Clone the PMM Repo on your local 
+
+```
+git clone git@github.com:ontic-in/dreamhouse-sfdx.git
+cd dreamhouse-sfdx
+```
+
+3. Making the authorised sandbox as the default org for the project : 
+``` 
+sf config set target-org DreamhouseSandbox
+```
+
+4. Run the following command shell command
+```
+./deploy.sh
+```
+
 ## Table of contents
 
 -   [Installation instructions](#installation-instructions)

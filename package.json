@@ -11,6 +11,8 @@
         "test:unit:coverage": "sfdx-lwc-jest --coverage --skipApiVersionCheck",
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+        "apex:local:start": "start-apex-server --host 127.0.0.1",
+        "apex:local:stop": "stop-apex-server --host 127.0.0.1",
         "postinstall": "husky install",
         "precommit": "lint-staged"
     },
@@ -45,8 +47,8 @@
         "eslint-plugin-jest": "^25.3.0",
         "husky": "^7.0.2",
         "lint-staged": "^12.1.2",
-        "prettier": "^2.5.1",
-        "prettier-plugin-apex": "^1.10.0"
+        "prettier": "2.8.8",
+        "prettier-plugin-apex": "1.13.0"
     },
     "volta": {
         "node": "14.17.3",

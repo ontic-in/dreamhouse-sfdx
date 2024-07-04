@@ -15,10 +15,10 @@ public with sharing class SlackOpportunityPublisher {
         msg.put(
             'text',
             'The following opportunity has changed:\n' +
-            opportunity.Name +
-            '\nNew Stage: *' +
-            opportunity.StageName +
-            '*'
+                opportunity.Name +
+                '\nNew Stage: *' +
+                opportunity.StageName +
+                '*'
         );
         msg.put('mrkdwn', true);
         String body = JSON.serialize(msg);

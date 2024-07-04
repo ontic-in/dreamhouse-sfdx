@@ -71,9 +71,7 @@ public class HandlerFindProperties implements BotHandler {
                     new BotField(
                         'Name',
                         p.Name,
-                        '/lightning/r/Property__c/' +
-                        p.Id +
-                        '/view'
+                        '/lightning/r/Property__c/' + p.Id + '/view'
                     )
                 );
                 fields.add(new BotField('Bedrooms', '' + p.Beds__c));
@@ -87,12 +85,12 @@ public class HandlerFindProperties implements BotHandler {
                 new BotMessage(
                     'Bot',
                     'Here is a list of properties in ' +
-                    city +
-                    ' between ' +
-                    this.formatCurrency(minPrice) +
-                    ' and ' +
-                    this.formatCurrency(maxPrice) +
-                    ': ',
+                        city +
+                        ' between ' +
+                        this.formatCurrency(minPrice) +
+                        ' and ' +
+                        this.formatCurrency(maxPrice) +
+                        ': ',
                     records
                 )
             );

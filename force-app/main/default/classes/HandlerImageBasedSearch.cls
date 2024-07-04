@@ -28,9 +28,7 @@ public with sharing class HandlerImageBasedSearch implements BotHandler {
             fields.add(
                 new BotField(
                     'Probability',
-                    '' +
-                    (p.probability * 100).round() +
-                    '%'
+                    '' + (p.probability * 100).round() + '%'
                 )
             );
             records.add(new BotRecord(fields));
@@ -57,9 +55,7 @@ public with sharing class HandlerImageBasedSearch implements BotHandler {
                 new BotField(
                     'Name',
                     p.Name,
-                    '/lightning/r/Property__c/' +
-                    p.Id +
-                    '/view'
+                    '/lightning/r/Property__c/' + p.Id + '/view'
                 )
             );
             fields.add(new BotField('Bedrooms', '' + p.Beds__c));

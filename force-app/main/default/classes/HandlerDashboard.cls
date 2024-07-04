@@ -27,9 +27,7 @@ public with sharing class HandlerDashboard implements BotHandler {
                 new BotField(
                     'Name',
                     d.Title,
-                    '/lightning/r/Dashboard/' +
-                    d.Id +
-                    '/view'
+                    '/lightning/r/Dashboard/' + d.Id + '/view'
                 )
             );
             fields.add(new BotField('Folder', d.FolderName));
@@ -41,9 +39,7 @@ public with sharing class HandlerDashboard implements BotHandler {
         return new BotResponse(
             new BotMessage(
                 'Astro',
-                'Here is a list of dashboards matching "' +
-                params[0] +
-                '":',
+                'Here is a list of dashboards matching "' + params[0] + '":',
                 records
             )
         );

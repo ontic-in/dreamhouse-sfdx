@@ -86,8 +86,8 @@ public with sharing class SampleDataController {
             if (obj.isCreateable() != true && obj.isDeletable() != true) {
                 throw new AuraHandledException(
                     'You do not have permission to create or delete ' +
-                    obj.getName() +
-                    ' objects.'
+                        obj.getName() +
+                        ' objects.'
                 );
             }
         }

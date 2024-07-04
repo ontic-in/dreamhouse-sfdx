@@ -23,9 +23,7 @@ public with sharing class HandlerReport implements BotHandler {
                 new BotField(
                     'Name',
                     r.Name,
-                    '/lightning/r/Report/' +
-                    r.Id +
-                    '/view'
+                    '/lightning/r/Report/' + r.Id + '/view'
                 )
             );
             fields.add(new BotField('Folder', r.FolderName));
@@ -35,9 +33,7 @@ public with sharing class HandlerReport implements BotHandler {
         return new BotResponse(
             new BotMessage(
                 'Astro',
-                'Here is a list of reports matching "' +
-                params[0] +
-                '":',
+                'Here is a list of reports matching "' + params[0] + '":',
                 records
             )
         );
