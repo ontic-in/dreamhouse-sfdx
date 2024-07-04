@@ -23,9 +23,7 @@ public with sharing class HandlerFindContact implements BotHandler {
                 new BotField(
                     'Name',
                     c.Name,
-                    '/lightning/r/Contact/' +
-                    c.Id +
-                    '/view'
+                    '/lightning/r/Contact/' + c.Id + '/view'
                 )
             );
             fields.add(
@@ -36,9 +34,7 @@ public with sharing class HandlerFindContact implements BotHandler {
         return new BotResponse(
             new BotMessage(
                 'Bot',
-                'Here is a list of contacts matching "' +
-                params[0] +
-                '":',
+                'Here is a list of contacts matching "' + params[0] + '":',
                 records
             )
         );

@@ -24,9 +24,7 @@ public with sharing class HandlerTopOpportunities implements BotHandler {
                 new BotField(
                     'Name',
                     o.Name,
-                    '/lightning/r/Opportunity/' +
-                    o.Id +
-                    '/view'
+                    '/lightning/r/Opportunity/' + o.Id + '/view'
                 )
             );
             fields.add(new BotField('Amount', '$' + o.Amount));
@@ -37,9 +35,7 @@ public with sharing class HandlerTopOpportunities implements BotHandler {
         return new BotResponse(
             new BotMessage(
                 'Bot',
-                'Here are your top ' +
-                params[0] +
-                ' opportunities:',
+                'Here are your top ' + params[0] + ' opportunities:',
                 records
             )
         );

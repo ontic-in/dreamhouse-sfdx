@@ -20,9 +20,7 @@ public with sharing class LIFXController {
     public static String setPower(String lightId, Boolean isOn) {
         return LIFXController.setState(
             lightId,
-            '{"power": "' +
-            (isOn == true ? 'on' : 'off') +
-            '"}'
+            '{"power": "' + (isOn == true ? 'on' : 'off') + '"}'
         );
     }
 
@@ -30,9 +28,7 @@ public with sharing class LIFXController {
     public static String setBrightness(String lightId, Decimal brightness) {
         return LIFXController.setState(
             lightId,
-            '{"brightness": ' +
-            (brightness / 100) +
-            '}'
+            '{"brightness": ' + (brightness / 100) + '}'
         );
     }
 

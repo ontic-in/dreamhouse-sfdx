@@ -23,9 +23,7 @@ public with sharing class HandlerFileUpload implements BotHandler {
                 new BotField(
                     'Name',
                     v.Id,
-                    '/lightning/r/ContentDocument/' +
-                    doc.Id +
-                    '/view'
+                    '/lightning/r/ContentDocument/' + doc.Id + '/view'
                 )
             );
             fields.add(new BotField('Name', v.title));

@@ -27,9 +27,7 @@ public with sharing class HandlerMyOpenCases implements BotHandler {
                 new BotField(
                     'Name',
                     c.CaseNumber,
-                    '/lightning/r/Case/' +
-                    c.Id +
-                    '/view'
+                    '/lightning/r/Case/' + c.Id + '/view'
                 )
             );
             fields.add(new BotField('Subject', c.Subject));
@@ -39,9 +37,7 @@ public with sharing class HandlerMyOpenCases implements BotHandler {
                 new BotField(
                     'Name',
                     c.Contact.Name,
-                    '/lightning/r/Contact/' +
-                    c.Contact.Id +
-                    '/view'
+                    '/lightning/r/Contact/' + c.Contact.Id + '/view'
                 )
             );
             records.add(new BotRecord(fields));

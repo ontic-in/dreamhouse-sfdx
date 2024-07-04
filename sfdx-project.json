@@ -7,6 +7,14 @@
       "versionNumber": "1.0.0.NEXT",
       "versionName": "Dreamhouse Aura v1.0.0",
       "versionDescription": ""
+    },
+    {
+      "path": "force-app",
+      "package": "dreamhouseUnlockedPackage",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
     }
   ],
   "namespace": "",
@@ -14,6 +22,7 @@
   "sourceApiVersion": "45.0",
   "packageAliases": {
     "DreamhouseAura": "0Ho3h000000k9yZCAQ",
-    "DreamhouseAura@1.0.0-1": "04t3h000004mBpnAAE"
+    "DreamhouseAura@1.0.0-1": "04t3h000004mBpnAAE",
+    "dreamhouseUnlockedPackage": "0HoJ10000004C9DKAU"
   }
 }

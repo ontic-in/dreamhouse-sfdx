@@ -30,12 +30,7 @@ public with sharing class HandlerAddTwoNumbers implements BotHandler {
             Integer total = firstNumber + secondNumber;
             BotMessage message = new BotMessage(
                 'Bot',
-                '' +
-                firstNumber +
-                ' + ' +
-                secondNumber +
-                ' = ' +
-                total
+                '' + firstNumber + ' + ' + secondNumber + ' = ' + total
             );
             return new BotResponse(message);
         }

@@ -24,9 +24,7 @@ public with sharing class HandlerFindAccount implements BotHandler {
                 new BotField(
                     'Name',
                     a.Name,
-                    '/lightning/r/Account/' +
-                    a.Id +
-                    '/view'
+                    '/lightning/r/Account/' + a.Id + '/view'
                 )
             );
             fields.add(new BotField('Phone', a.Phone, 'tel:' + a.Phone));
@@ -35,9 +33,7 @@ public with sharing class HandlerFindAccount implements BotHandler {
         return new BotResponse(
             new BotMessage(
                 'Bot',
-                'Here is a list of accounts matching "' +
-                params[0] +
-                '":',
+                'Here is a list of accounts matching "' + params[0] + '":',
                 records
             )
         );
